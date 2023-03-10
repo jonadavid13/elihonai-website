@@ -11,57 +11,17 @@
     --header-navbar: rgb(247, 217, 189);
     --first-hero-color: rgb(245, 238, 214);
     --morado-logo: #532238;
+    --morado-logo-2: #7e3a58;
+    --morado-hover-btn-tienda: #6d0430;
     --morado-logo-claro: #ebccdb;
     --palette-brown: #664a39;
+    --palette-brown-btn: #d8c3b7;
+    --palette-brown-2: #664e3e;
     --products-bg-rose: rgb(243, 201, 201);
-    --products-bg-rose-og: rgb(226, 165, 165);
-}
+    --products-bg-rose-light:  rgb(243, 201, 201);
+    --products-bg-rose-og: rgb(192, 82, 91);
+    --card-img-shadow: 2px 5px 10px rgb(31, 31, 31);
 
-@media (max-width: 992px){
-    .team-section-container .cardContainer {
-        width: 25rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-collapse {
-        justify-content: left;
-    }
-
-    /* .carousel, .carousel-inner > .carousel-item > img {
-        height: 50vh;
-        width: min-content;
-    } */
-
-    .carousel-inner,.carousel-item {
-        box-shadow: none;
-    }
-
-    #aboutFirstContainer .description {
-        width: 80vw;
-    }
-
-    .team-section-container .cardContainer {
-        width: 25rem;
-    }
-}
-
-@media (max-width: 550px) {
-    .header-title {
-        font-size: 3.5rem;
-    }
-
-    .header__main-container {
-        height: 6rem;
-    }
-
-    .carousel-inner,.carousel-item {
-        box-shadow: none;
-    }
-
-    #aboutFirstContainer .description {
-        width: 100%;
-    }
 }
 
 html{
@@ -88,10 +48,6 @@ body {
 }
 
 /* NAVBAR */
-
-main {
-    background-color: aquamarine;
-}
 
 .navbar {
     background-color: var(--header-navbar);
@@ -134,15 +90,19 @@ main {
     box-shadow: 10px 0 50px rgb(0, 0, 0) inset;
 }
 
-/* .carousel, .carousel-inner > .carousel-item > img {
-    height: 75vh;
-} */
-
 .carousel-caption {
     background-color: var(--carousel-background-caption);
     border-radius: 0.4rem;
     padding: 1.5rem;
-    /* text-shadow: black 1px 0 10px; */
+}
+
+.carousel-caption p {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.item1 .carousel-caption p {
+    margin-top: 2rem;
 }
 
 /*      Seccion 2 - ABOUT: Hero1      */
@@ -176,23 +136,23 @@ main {
 
 /*      About - 2da Seccion        */
 
-#aboutFirstContainer {
+#about {
     margin: 0;
     background-color: var(--first-hero-color);
     padding: 4rem 0 3rem 0;
 }
 
-#aboutFirstContainer h3 {
+#about h3 {
     font-size: 3rem;
 }
 
 .standard-title {
-    font-size: calc(2rem + 2.7vw);
+    font-size: calc(2.3rem + 2.7vw);
     font-family: var(--header-title-font);
     margin-bottom: 2rem;
 }
 
-#aboutFirstContainer .feature-col {
+#about .feature-col {
     margin: 0 3rem;
 }
 
@@ -206,46 +166,63 @@ main {
 
 .about-img-container {
     margin-bottom: 1.6rem;
-    
 }
 
 .about-img-container img {
-    width: 95%;
+    /* width: 100%; */
     border-radius: .3rem;
     box-shadow: 2px 5px 10px rgb(31, 31, 31);
 }
 
-/* Products - 3era Sección */
+/* Sección - Productos */
 
-#productsContainer {
+#products {
     /* background-color: rgb(226, 165, 165); */
-    background-color: var(--products-bg-rose);
+    background-color: var(--products-bg-rose-light);
     padding: 4rem 0;
 }
 
-#productsContainer h5 {
+#products h5 {
     font-size: 2rem;
 }
 
-#productsContainer .card {
+#products .card {
     margin: 2rem;
 }
 
+.productCardsContainer .card {
+    width: 27.5rem;
+    border: none;
+    box-shadow: .2rem .2rem 1rem rgb(31, 31, 31);
+}
+
+
 /* Tienda - 4ta Sección */
 
-#tiendaContainer .lead{
+#store .lead{
     font-size: 2rem;
     font-weight:400;
     margin-top: 1.5rem;
 }
 
-#tiendaContainer {
+#store {
     width: 100vw;
     color: white;
 }
 
-.tiendaBackground {
-    background-color: var(--palette-brown);
+.tiendaContainer {
+    background-color: var(--morado-logo-2);
+}
+
+#store .btn-primary {
+    background-color: var(--morado-logo-claro);
+    border: none;
+    color: black;
+} 
+
+#store .btn-primary:hover {
+    background-color: #6d0430;
+    color: white;
 }
 
 .botonTienda {
@@ -254,7 +231,7 @@ main {
     margin-top: 1.6rem;
 }
 
-#tiendaContainer .tiendaImg {
+#store .tiendaImg {
     border-radius: .3rem;
     box-shadow: 2px 5px 10px rgb(31, 31, 31);
 }
@@ -294,19 +271,24 @@ main {
 /* FOOTER */
 
 footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     background-color: var(--morado-logo);
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     color: white;
+    justify-content: space-between;
 }
 
 footer .img-thumbnail {
-    width: 17.5rem;
+    width: 22.5rem;
     border: none;
     padding: 0;
 }
 
 footer .footerIconGroup {
     display: flex;
+    justify-content: end;
 }
 
 footer .footerIconGroup svg {
@@ -316,6 +298,117 @@ footer .footerIconGroup svg {
 
 footer .footerIconGroup svg {
     color: white;
+}
+
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 992px){
+    .team-section-container .cardContainer {
+        width: 25rem;
+    }
+
+    .footerContainer .footerIconGroup {
+        flex-wrap: nowrap;
+    }
+
+    .aboutMainContainer {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: left;
+    }
+
+    /* .carousel, .carousel-inner > .carousel-item > img {
+        height: 50vh;
+        width: min-content;
+    } */
+
+    .carousel-inner,.carousel-item {
+        box-shadow: none;
+    }
+
+    #about .description {
+        width: 80vw;
+    }
+
+    .team-section-container .cardContainer {
+        width: 25rem;
+    }
+
+    .footerContainer {
+        align-items: end;
+        padding: 3rem 0;
+    }
+
+    .footerLogo {
+        margin-left: 1rem;
+        order: -1;
+    }
+
+    .footer-info {
+        position: absolute;
+        text-align: center;
+        right: 53.953px;
+    }
+
+    .footerIconGroup {
+        align-self: center;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-title {
+        font-size: 3.5rem;
+    }
+
+    .header__main-container {
+        height: 6rem;
+    }
+
+    .carousel-inner,.carousel-item {
+        box-shadow: none;
+    }
+
+    #about .description {
+        width: 100%;
+    }
+
+    .aboutMainContainer {
+        width: auto;
+    }
+
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        padding-top: 3rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footerContainer .footerLogo {
+        order: 0;
+        margin-top: 0;
+        align-self: center;
+    }
+
+    .footerContainer .footer-info {
+        position:inherit;
+        order: 1;
+        align-self: center;
+    }
+
+    .footerContainer .footerIconGroup {
+        margin: 3rem 0;
+        justify-content: space-between;
+        width: 80vw;
+    }
 }
 
 /* .ig-embed {
