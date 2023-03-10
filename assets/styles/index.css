@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-title-font: 'Libre Bodoni', 'Segoe UI', sans-serif;
+    --carousel-background-caption: rgba(0, 0, 0, 0.521);
+    --header-color: rgb(250, 207, 166);
+    --header-navbar: rgb(247, 217, 189);
+    --first-hero-color: rgb(245, 238, 214);
+    --morado-logo: #532238;
+    --morado-logo-claro: #ebccdb;
+    --palette-brown: #664a39;
+    --products-bg-rose: rgb(243, 201, 201);
+    --products-bg-rose-og: rgb(226, 165, 165);
+}
+
+@media (max-width: 992px){
+    .team-section-container .cardContainer {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        justify-content: left;
+    }
+
+    /* .carousel, .carousel-inner > .carousel-item > img {
+        height: 50vh;
+        width: min-content;
+    } */
+
+    .carousel-inner,.carousel-item {
+        box-shadow: none;
+    }
+
+    #aboutFirstContainer .description {
+        width: 80vw;
+    }
+
+    .team-section-container .cardContainer {
+        width: 25rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .header-title {
+        font-size: 3.5rem;
+    }
+
+    .header__main-container {
+        height: 6rem;
+    }
+
+    .carousel-inner,.carousel-item {
+        box-shadow: none;
+    }
+
+    #aboutFirstContainer .description {
+        width: 100%;
+    }
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.header__main-container {
+    background-color: var(--header-color);
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-title {
+    font-family: var(--header-title-font);
+    font-size: 5.6rem;
+    color: black;
+}
+
+/* NAVBAR */
+
+main {
+    background-color: aquamarine;
+}
+
+.navbar {
+    background-color: var(--header-navbar);
+    font-size: 2rem;
+    box-shadow: 0 2px 10px #000000a4;
+}
+
+.nav-item {
+    padding: 0 1.5rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    color: black;
+}
+
+.nav-link:hover {
+    background-color: rgb(156, 123, 96);
+    color: white;
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN */
+
+#startCarousel {
+    background-color: #2c241a;
+}
+
+.carousel-item img {
+    margin: 0 auto;
+    max-height: 75vh;
+    box-shadow: 10px 0 40px black;
+}
+
+.carousel-inner {
+    box-shadow: 10px 0 50px rgb(0, 0, 0) inset;
+}
+
+/* .carousel, .carousel-inner > .carousel-item > img {
+    height: 75vh;
+} */
+
+.carousel-caption {
+    background-color: var(--carousel-background-caption);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+    /* text-shadow: black 1px 0 10px; */
+}
+
+/*      Seccion 2 - ABOUT: Hero1      */
+
+.startHero1 {
+    background: white;
+    font-size: 2rem;
+    margin-top: 0;
+    padding: 6rem 0 7rem 0;
+}
+
+.hero1-title-container {
+    margin-bottom: 4rem;
+}
+
+.hero1-title {
+    font-size: calc(2.36rem + 2.7vw);
+    line-height: 1.2;
+    margin: 4rem 0 2rem 0;
+    font-family: var(--header-title-font);
+}
+
+.hero1-description {
+    margin-bottom: 3rem;
+}
+
+.startHero-imgContainer img {
+    width: 60rem;
+    max-width: 90vw;
+}
+
+/*      About - 2da Seccion        */
+
+#aboutFirstContainer {
+    margin: 0;
+    background-color: var(--first-hero-color);
+    padding: 4rem 0 3rem 0;
+}
+
+#aboutFirstContainer h3 {
+    font-size: 3rem;
+}
+
+.standard-title {
+    font-size: calc(2rem + 2.7vw);
+    font-family: var(--header-title-font);
+    margin-bottom: 2rem;
+}
+
+#aboutFirstContainer .feature-col {
+    margin: 0 3rem;
+}
+
+.description {
+    position: relative;
+    width: 75vw;
+    margin: 0 auto;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.about-img-container {
+    margin-bottom: 1.6rem;
+    
+}
+
+.about-img-container img {
+    width: 95%;
+    border-radius: .3rem;
+    box-shadow: 2px 5px 10px rgb(31, 31, 31);
+}
+
+/* Products - 3era Sección */
+
+#productsContainer {
+    /* background-color: rgb(226, 165, 165); */
+    background-color: var(--products-bg-rose);
+    padding: 4rem 0;
+}
+
+#productsContainer h5 {
+    font-size: 2rem;
+}
+
+#productsContainer .card {
+    margin: 2rem;
+}
+
+/* Tienda - 4ta Sección */
+
+#tiendaContainer .lead{
+    font-size: 2rem;
+    font-weight:400;
+    margin-top: 1.5rem;
+}
+
+#tiendaContainer {
+    width: 100vw;
+    color: white;
+}
+
+.tiendaBackground {
+    background-color: var(--palette-brown);
+}
+
+.botonTienda {
+    font-size: 1.6rem;
+    padding: .5rem 3rem;
+    margin-top: 1.6rem;
+}
+
+#tiendaContainer .tiendaImg {
+    border-radius: .3rem;
+    box-shadow: 2px 5px 10px rgb(31, 31, 31);
+}
+
+.team-title {
+    margin: 4rem 0 3rem;
+}
+
+.team-section-container {
+    flex-direction: column;
+    /* padding-bottom: 4rem; */
+    background-color: var(--morado-logo-claro);
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 2rem;
+}
+
+.team-cards-container {
+    padding: 0;
+    margin: 0;
+}
+
+.cardContainer {
+    width: 40rem;
+    margin: 0 2rem 2rem;
+}
+
+.cardContainer h2 {
+    margin: 1.2rem 0;
+    font-weight: 500;
+}
+
+.cardContainer .img-thumbnail {
+    width: 18rem;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: var(--morado-logo);
+    padding: 2rem;
+    color: white;
+}
+
+footer .img-thumbnail {
+    width: 17.5rem;
+    border: none;
+    padding: 0;
+}
+
+footer .footerIconGroup {
+    display: flex;
+}
+
+footer .footerIconGroup svg {
+    margin: 0 2rem;
+    width: 2.5rem;
+}
+
+footer .footerIconGroup svg {
+    color: white;
+}
+
+/* .ig-embed {
+    height: 25%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+} */
+
