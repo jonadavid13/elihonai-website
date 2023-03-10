@@ -47,6 +47,11 @@ body {
     color: black;
 }
 
+.header-title a {
+    text-decoration: none;
+    color: black;
+}
+
 /* NAVBAR */
 
 .navbar {
